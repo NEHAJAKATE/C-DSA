@@ -1,19 +1,23 @@
-#include <iostream>
-#include <vector>  // ✅ This is necessary for using vector
+// Find the Average of Array Elements-In this problem, you are tasked with writing a program that 
+//calculates the average of an array of integers.
+// The program should return the average as a floating-point number that reflects the arithmetic mean of all elements in the array.
 
+#include <iostream>
+#include <vector>  
 using namespace std;
+
 
 class Solution {
 public:
     double findAverage(const vector<int>& arr) {
         int totalSum = 0;
-        int size = arr.size();
+        int n = arr.size();
 
-        for (int i = 0; i < size; i++) {
+        for (int i = 0; i < n; i++) {
             totalSum += arr[i];
         }
 
-        return static_cast<double>(totalSum) / size;
+        return (double)totalSum / n;
     }
 };
 
